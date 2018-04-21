@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Calculator</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 offset-md-4" style="padding-top: 5%">
+				<div id="calculator-body" class="col-md-10 offset-md-1">
+				<p align="center">ELECTRONIC CALCULATOR</p>
+				<div id="screen">
+					<p class="my-auto" id="answer">0</p>
+					<p class="my-auto" id="expression">0</p>
+				</div>
+				<div class="container-fluid" id="buttons">
+					<div class="row">
+						<button class="col-md-2 btn btn-danger clear" id="AC">AC</button>
+						<button class="col-md-2 btn btn-danger clear" id="CE">CE</button>
+						<button class="col-md-2 btn btn-info show" id="div">&divide;</button>
+						<button class="col-md-2 btn btn-info show" id="mult">&times;</button>
+					</div>
+					<div class="row">
+						<button class="col-md-2 btn btn-primary show" id="7">7</button>
+						<button class="col-md-2 btn btn-primary show" id="8">8</button>
+						<button class="col-md-2 btn btn-primary show" id="9">9</button>
+						<button class="col-md-2 btn btn-info show" id="sub">-</button>
+					</div>
+					<div class="row">
+						<button class="col-md-2 btn btn-primary show" id="4">4</button>
+						<button class="col-md-2 btn btn-primary show" id="5">5</button>
+						<button class="col-md-2 btn btn-primary show" id="6">6</button>
+						<button class="col-md-2 btn btn-info show" id="add">+</button>
+					</div>
+					<div class="row">
+						<button class="col-md-2 btn btn-primary show" id="1">1</button>
+						<button class="col-md-2 btn btn-primary show" id="2">2</button>
+						<button class="col-md-2 btn btn-primary show" id="3">3</button>
+						<button class="col-md-2 btn" style="visibility: hidden;">T</button>
+					</div>
+					<div class="row">
+						<button class="col-md-5 btn btn-primary show" id="0">0</button>
+						<button class="col-md-2 btn btn-primary show" id="period">.</button>
+						<button class="col-md-2 btn btn-success" style="margin-top: -52px; height: 106px" id="calculate">=</button>
+					</div>
+				</div>
+			</div>
+		</div>
+			</div>
+		<footer align="center" style="padding-top: 1.5%">made by <a href="https://mouri1.github.io">Rohit Das</a></footer>
+	</div>
+</body>
+</html>
