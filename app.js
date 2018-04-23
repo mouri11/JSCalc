@@ -1,7 +1,16 @@
 var numbers = ["9","8","7","6","5","4","3","2","1","0"];
-var ops = {"div": "÷","mult": "×","sub": "-","add": "+", "period": "."};
+var ops = {"div": "÷","mult": "×","sub": "-","add": "+"};
 
 $(document).ready(function() {
+	$(window).resize(function() {
+		$("#calculator-body").css("font-size", Math.ceil(parseFloat($("#calculator-body").css("width"))/21.86));
+		$("#answer").css("font-size", Math.ceil(parseFloat($("#calculator-body").css("width"))/9.33));
+		$(".btn").css("font-size", Math.ceil(parseFloat($("#calculator-body").css("width"))/21.86));
+		$(".btn").css("height", Math.ceil(parseFloat($("#calculator-body").css("width"))/7.36));
+		$("#calculate").css("height", Math.ceil(parseFloat($(".btn").css("height"))*2.3));
+		$("#calculate").css("margin-top", Math.ceil(parseFloat($(".btn").css("height"))*(-1.2)));
+	});
+
 	var period = true;
 	var op = false;
 	var answer = false;
@@ -15,6 +24,14 @@ $(document).ready(function() {
 		$(".btn").css("box-shadow", "");
 	});
 
+	$("#period").on("click", function() {
+		if (period) {
+			period = false;
+			$("#answer").text(".");
+			$("#expression").append(".");
+		}
+	});
+
 	$.each(ops, function(i,val) {
 		$("#"+i).on("click", function() {
 			var maxlen = $("#expression").text().length >= Math.ceil($("#screen").width()/13);
@@ -25,11 +42,6 @@ $(document).ready(function() {
 					$("#answer").text($("#"+i).text());
 					$("#expression").append($("#"+i).text());
 					answer = false;
-				}
-				else if (period && i === "period") {
-					period = false;
-					$("#answer").text(".");
-					$("#expression").append(".");
 				}
 				else {
 					period = true;

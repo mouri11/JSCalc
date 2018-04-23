@@ -34,7 +34,6 @@ body {
 }
 
 .btn {
-	height: 47.5px;
 	box-shadow: 0 0 0 1px #ebebeb inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 5px 0 0 #adadad, 0 5px 0 1px rgba(0,0,0,0.4), 0 5px 5px 1px rgba(0,0,0,0.5);
 	margin:6px auto 6px auto;
 }
